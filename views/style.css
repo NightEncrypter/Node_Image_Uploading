@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+}
+
+h1{
+    color: blue;
+    font-size: 20px;
+}
+
+.input-text{
+    border: none;
+}
+

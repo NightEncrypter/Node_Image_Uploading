@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Node file Uploads</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>*** Upload File ***</h1>
+        <%= typeof msg !='undefined'? msg: '' %>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div>
+                <input type="file" name="single"id="file" style="border:none;">
+                <input type="text" class="iput-text" style="border:none;background:transparent;outline: none;padding: 10px 5px;border-bottom: 1px solid green;">
+            </div>
+   <input type="submit" style="border:none;padding: 10px 20px;background-color: rgb(178, 156, 199);color: white;margin-top: 30px;cursor: pointer;" class="btn" value="Submit">
+        </form>
+        <br>
+        <div >
+
+            <!-- <img src="<%= typeof file !='undefined'? file:'' %>" style="width:100px;height:100px" alt=""> -->
+        </div>
+    </div>
+<h1>*** MULTIPLE UPLOADS ***</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div>
+            <input type="file" name="mfiles" multiple  id="mfile" style="border:none;">
+            <input type="text" class="iput-text" style="border:none;background:transparent;outline: none;padding: 10px 5px;border-bottom: 1px solid green;">
+        </div>
+<input type="submit" style="border:none;padding: 10px 20px;background-color: rgb(126, 22, 225);color: white;margin-top: 30px;cursor: pointer;" class="btn" value="Submit">
+    </form>
+    <br>
+    <div >
+
+        <img src="<%= typeof file !='undefined'? file:'' %>" style="width:100px;height:100px" alt="">
+    </div>
+</body>
+</html>
